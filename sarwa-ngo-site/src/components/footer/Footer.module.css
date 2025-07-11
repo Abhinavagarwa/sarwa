@@ -1,0 +1,88 @@
+.footer {
+  background: linear-gradient(135deg, #1a4697, #2e9b57);
+  color: white;
+  padding: 3rem 2rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ensures left alignment of all children */
+  text-align: left;
+}
+
+.block h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #b0f0d2;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.block h3:hover {
+  border-bottom-color: #b0f0d2;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.block a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  position: relative;
+  display: block; /* ensures vertical stacking */
+  width: 100%;     /* full width for consistent alignment */
+}
+
+.block .link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  display: block; /* ensures vertical stacking */
+  width: 100%;     /* full width for consistent alignment */
+}
+
+.block .link::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b0f0d2;
+  font-size: 0.75rem;
+}
+
+.block a:hover {
+  color: #b0f0d2;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .block {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
